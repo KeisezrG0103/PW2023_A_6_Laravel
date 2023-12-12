@@ -24,15 +24,14 @@ class KursusController extends Controller
                 'thumbnail' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             ],
             [
-                'title.required' => 'Title is required!',
-                'bahasa_pemrograman.required' => 'Bahasa Pemrograman is required!',
-                'content.required' => 'Content is required!',
-                'author.required' => 'Author is required!',
-                'thumbnail.required' => 'Thumbnail is required!',
-                'thumbnail.image' => 'Thumbnail must be an image!',
-                'thumbnail.mimes' => 'Thumbnail must be jpeg,png,jpg,gif,svg!',
-                'thumbnail.max' => 'Thumbnail must be less than 2048kb!',
-
+                'title.required' => 'Title harus diisi!',
+                'bahasa_pemrograman.required' => 'Bahasa Pemrograman harus diisi!',
+                'content.required' => 'Content harus diisi!',
+                'author.required' => 'Author harus diisi!',
+                'thumbnail.required' => 'Thumbnail harus diisi!',
+                'thumbnail.image' => 'Thumbnail harus berupa gambar!',
+                'thumbnail.mimes' => 'Thumbnail harus berupa gambar dengan format jpeg, png, jpg, gif, svg!',
+                'thumbnail.max' => 'Thumbnail maksimal 2048kb!',
 
             ]
         );

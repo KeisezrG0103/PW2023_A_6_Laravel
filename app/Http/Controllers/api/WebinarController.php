@@ -14,6 +14,10 @@ class WebinarController extends Controller
     public function index()
     {
         $webinar = Webinar::all();
+
+        foreach ($webinar as $w) {
+            $w->thumbnail = url('storage/webinar/' . $w->thumbnail);
+        }
         return response()->json([
             'status' => 200,
             'message' => 'Get all webinar successful!',
@@ -24,6 +28,10 @@ class WebinarController extends Controller
     public function show($id)
     {
         $webinar = Webinar::find($id);
+
+        $webinar->thumbnail = url('storage/webinar/' . $webinar->thumbnail);
+
+
         if (!$webinar) {
             return response()->json([
                 'status' => 404,
@@ -45,8 +53,20 @@ class WebinarController extends Controller
             'title' => 'required',
             'content' => 'required',
             'pengisi_acara' => 'required',
-            'thumbnail' => 'required',
-        ]);
+            'thumbnail' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ],
+
+        [
+            'tanggal.required' => 'Tanggal harus diisi!',
+            'title.required' => 'Title harus diisi!',
+            'content.required' => 'Content harus diisi!',
+            'pengisi_acara.required' => 'Pengisi acara harus diisi!',
+            'thumbnail.required' => 'Thumbnail harus diisi!',
+            'thumbnail.image' => 'Thumbnail harus berupa gambar!',
+            'thumbnail.mimes' => 'Thumbnail harus berupa gambar dengan format jpeg, png, jpg, gif, svg!',
+            'thumbnail.max' => 'Thumbnail maksimal 2048kb!',
+        ]
+    );
 
         if ($validation->fails()) {
             return response()->json([
@@ -73,7 +93,7 @@ class WebinarController extends Controller
             'title' => $request->title,
             'content' => $request->content,
             'pengisi_acara' => $request->pengisi_acara,
-            'thumbnail' => $request->thumbnail,
+            'thumbnail' => $filename,
         ]);
         return response()->json([
             'status' => 201,
@@ -139,8 +159,6 @@ class WebinarController extends Controller
             ]);
 
         }
-
-
 
         try {
             $webinar->update([

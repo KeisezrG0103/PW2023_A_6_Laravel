@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\api\AuthController;
 use App\Http\Controllers\api\UserController;
 use App\Http\Controllers\api\KursusController;
+use App\Http\Controllers\api\WebinarController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,5 +32,13 @@ Route::group(['middleware' => ['auth:api']], function () {
     Route::get('/kursus/{id}', [KursusController::class, 'readByid']);
     Route::patch('/kursus/{id}', [KursusController::class, 'update']);
     Route::delete('/kursus/{id}', [KursusController::class, 'delete']);
+
+    Route::get('/webinar', [WebinarController::class, 'index']);
+    Route::get('/webinar/{id}', [WebinarController::class, 'show']);
+    Route::post('/webinar', [WebinarController::class, 'store']);
+    Route::patch('/webinar/{id}', [WebinarController::class, 'update']);
+    Route::delete('/webinar/{id}', [WebinarController::class, 'delete']);
+
+
 
 });
