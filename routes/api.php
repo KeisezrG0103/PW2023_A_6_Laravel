@@ -36,7 +36,7 @@ Route::group(['middleware' => ['auth:api']], function () {
     Route::get('/webinar', [WebinarController::class, 'index']);
     Route::get('/webinar/{id}', [WebinarController::class, 'show']);
     Route::post('/webinar', [WebinarController::class, 'store']);
-    Route::patch('/webinar/{id}', [WebinarController::class, 'update']);
+    Route::put('/webinar/{id}', [WebinarController::class, 'update']);
     Route::delete('/webinar/{id}', [WebinarController::class, 'delete']);
 
 

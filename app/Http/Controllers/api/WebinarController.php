@@ -127,38 +127,25 @@ class WebinarController extends Controller
     {
         $webinar = Webinar::find($id);
 
-        $validation = Validator::make($request->all(), [
-            'tanggal' => 'required',
-            'title' => 'required',
-            'content' => 'required',
-            'pengisi_acara' => 'required',
-        ]);
 
-        if ($validation->fails()) {
-            return response()->json([
-                'message' => 'Webinar update failed!',
-                'errors' => $validation->errors()
-            ], 400);
-        }
+        // if($request->hasFile('thumbnail')){
+        //     $image = $request->file('thumbnail');
+        //     $filename = time() . '.' . $image->getClientOriginalExtension();
 
-        if($request->hasFile('thumbnail')){
-            $image = $request->file('thumbnail');
-            $filename = time() . '.' . $image->getClientOriginalExtension();
+        //     // Use putFileAs to specify a file name
+        //     Storage::disk('local')->putFileAs(
+        //         'public/webinar/',
+        //         $image,
+        //         $filename,
+        //         'public' // Set the visibility to public
+        //     );
+        //     Storage::disk('local')->delete('public/webinar/' . $webinar->thumbnail);
 
-            // Use putFileAs to specify a file name
-            Storage::disk('local')->putFileAs(
-                'public/webinar/',
-                $image,
-                $filename,
-                'public' // Set the visibility to public
-            );
-            Storage::disk('local')->delete('public/webinar/' . $webinar->thumbnail);
+        //     $webinar->update([
+        //         'thumbnail' => $filename,
+        //     ]);
 
-            $webinar->update([
-                'thumbnail' => $filename,
-            ]);
-
-        }
+        // }
 
         try {
             $webinar->update([
@@ -175,7 +162,7 @@ class WebinarController extends Controller
         } catch (\Throwable $th) {
             return response()->json([
                 'status' => 401,
-                'message' => "Error",
+                'message' => $th->getMessage(),
             ], 401);
         }
     }
