@@ -149,62 +149,40 @@ class KursusController extends Controller
 
     public function update($id, Request $request)
     {
-        $kursus = Kursus::find($id);
-
-        // Uncomment the following block if you want to validate the request
-        /*
-        $validation = Validator::make($request->all(), [
-            'title' => 'required',
-            'bahasa_pemrograman' => 'required',
-            'content' => 'required',
-            'author' => 'required',
-        ]);
-
-        if ($validation->fails()) {
-            return response()->json([
-                'message' => 'Kursus update failed!',
-                'errors' => $validation->errors()
-            ], 400);
-        }
-        */
+        $kursus = Kursus::findOrFail($id);
 
         if ($request->hasFile('thumbnail')) {
+           $uploadFolder = 'thumbnail';
             $image = $request->file('thumbnail');
-            $filename = time() . '.' . $image->getClientOriginalExtension();
+            $image_uploaded_path = $image->store($uploadFolder, 'public');
+            $image_uploaded_path = basename($image_uploaded_path);
 
-            // Use putFileAs to specify a file name
-            Storage::disk('local')->putFileAs(
-                'public/thumbnail/',
-                $image,
-                $filename,
-                'public' // Set the visibility to public
-            );
-
-            // Delete the old thumbnail if it exists
             Storage::disk('local')->delete('public/thumbnail/' . $kursus->thumbnail);
 
-            // Update the thumbnail attribute
-            $kursus->thumbnail = $filename;
+            $kursus->thumbnail = $image_uploaded_path;
+
         }
 
         try {
-            // Update other attributes
             $kursus->update([
                 'title' => $request->title,
                 'bahasa_pemrograman' => $request->bahasa_pemrograman,
                 'content' => $request->content,
                 'author' => $request->author,
+                'thumbnail' => $kursus->thumbnail,
             ]);
 
             return response()->json([
                 'status' => 200,
-                'message' => 'Kursus updated',
+                'message' => "Kursus updated",
+                'kursus' => $kursus
             ], 200);
         } catch (\Throwable $th) {
             return response()->json([
                 'status' => 401,
-                'message' => 'Error',
+                'message' => $th->getMessage(),
             ], 401);
         }
+
     }
 }
