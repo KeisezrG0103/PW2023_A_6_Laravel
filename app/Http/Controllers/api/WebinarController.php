@@ -125,27 +125,30 @@ class WebinarController extends Controller
 
     public function update($id, Request $request)
     {
+
         $webinar = Webinar::find($id);
 
+        if($request->hasFile('thumbnail')){
+            $image = $request->file('thumbnail');
+            $filename = time() . '.' . $image->getClientOriginalExtension();
 
-        // if($request->hasFile('thumbnail')){
-        //     $image = $request->file('thumbnail');
-        //     $filename = time() . '.' . $image->getClientOriginalExtension();
+            // Use putFileAs to specify a file name
+            Storage::disk('local')->putFileAs(
+                'public/webinar/',
+                $image,
+                $filename,
+                'public' // Set the visibility to public
+            );
 
-        //     // Use putFileAs to specify a file name
-        //     Storage::disk('local')->putFileAs(
-        //         'public/webinar/',
-        //         $image,
-        //         $filename,
-        //         'public' // Set the visibility to public
-        //     );
-        //     Storage::disk('local')->delete('public/webinar/' . $webinar->thumbnail);
+            if($webinar->thumbnail != null){
+                Storage::disk('local')->delete('public/webinar/' . $webinar->thumbnail);
+            }
 
-        //     $webinar->update([
-        //         'thumbnail' => $filename,
-        //     ]);
+            $webinar->update([
+                'thumbnail' => $filename,
+            ]);
 
-        // }
+        }
 
         try {
             $webinar->update([
@@ -153,7 +156,6 @@ class WebinarController extends Controller
                 'title' => $request->title,
                 'content' => $request->content,
                 'pengisi_acara' => $request->pengisi_acara,
-
             ]);
             return response()->json([
                 'status' => 200,

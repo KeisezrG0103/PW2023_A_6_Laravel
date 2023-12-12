@@ -151,14 +151,25 @@ class KursusController extends Controller
         $kursus = Kursus::findOrFail($id);
 
         if ($request->hasFile('thumbnail')) {
-           $uploadFolder = 'thumbnail';
             $image = $request->file('thumbnail');
-            $image_uploaded_path = $image->store($uploadFolder, 'public');
-            $image_uploaded_path = basename($image_uploaded_path);
+            $filename = time() . '.' . $image->getClientOriginalExtension();
 
-            Storage::disk('local')->delete('public/thumbnail/' . $kursus->thumbnail);
+            // Use putFileAs to specify a file name
+            Storage::disk('local')->putFileAs(
+                'public/thumbnail/',
+                $image,
+                $filename,
+                'public' // Set the visibility to public
+            );
 
-            $kursus->thumbnail = $image_uploaded_path;
+            if ($kursus->thumbnail != null) {
+                Storage::disk('local')->delete('public/thumbnail/' . $kursus->thumbnail);
+            }
+
+            $kursus->update([
+                'thumbnail' => $filename,
+            ]);
+
 
         }
 
@@ -168,7 +179,6 @@ class KursusController extends Controller
                 'bahasa_pemrograman' => $request->bahasa_pemrograman,
                 'content' => $request->content,
                 'author' => $request->author,
-                'thumbnail' => $kursus->thumbnail,
             ]);
 
             return response()->json([

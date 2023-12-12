@@ -30,7 +30,7 @@ Route::group(['middleware' => ['auth:api']], function () {
     Route::post('/kursus', [KursusController::class, 'create']);
     Route::get('/kursus', [KursusController::class, 'readAll']);
     Route::get('/kursus/{id}', [KursusController::class, 'readByid']);
-    Route::patch('/kursus/{id}', [KursusController::class, 'update']);
+    Route::put('/kursus/{id}', [KursusController::class, 'update']);
     Route::delete('/kursus/{id}', [KursusController::class, 'delete']);
 
     Route::get('/webinar', [WebinarController::class, 'index']);
