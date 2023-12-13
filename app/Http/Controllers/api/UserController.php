@@ -57,4 +57,19 @@ class UserController extends Controller
             ], 401);
         }
     }
+
+    public function getUserLoggedIn(){
+        $user = auth()->user();
+        try {
+            return response()->json([
+                'status' => 200,
+                'user' => $user,
+            ], 200);
+        } catch (\Throwable $th) {
+            return response()->json([
+                'status' => 401,
+                'message' => "Error",
+            ], 401);
+        }
+    }
 }

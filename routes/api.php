@@ -6,6 +6,7 @@ use App\Http\Controllers\api\AuthController;
 use App\Http\Controllers\api\UserController;
 use App\Http\Controllers\api\KursusController;
 use App\Http\Controllers\api\WebinarController;
+use App\Http\Controllers\api\Subscription;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,6 +40,9 @@ Route::group(['middleware' => ['auth:api']], function () {
     Route::post('/webinar', [WebinarController::class, 'store']);
     Route::put('/webinar/{id}', [WebinarController::class, 'update']);
     Route::delete('/webinar/{id}', [WebinarController::class, 'delete']);
+
+    Route::post('/subscribe/{id}', [Subscription::class, 'Subscribe']);
+    Route::get('/user', [UserController::class, 'getUserLoggedIn']);
 
 
 
