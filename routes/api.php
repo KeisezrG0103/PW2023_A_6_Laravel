@@ -43,6 +43,7 @@ Route::group(['middleware' => ['auth:api']], function () {
 
     Route::post('/subscribe/{id}', [Subscription::class, 'Subscribe']);
     Route::get('/user', [UserController::class, 'getUserLoggedIn']);
+    Route::put('/user', [UserController::class, 'updateProfile']);
 
 
 
