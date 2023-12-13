@@ -32,12 +32,14 @@ Route::group(['middleware' => ['auth:api']], function () {
     Route::get('/kursus/{id}', [KursusController::class, 'readByid']);
     Route::put('/kursus/{id}', [KursusController::class, 'update']);
     Route::delete('/kursus/{id}', [KursusController::class, 'delete']);
+    Route::get('/kursus/search/{bahasa}', [KursusController::class, 'findByBahasa']);
 
     Route::get('/webinar', [WebinarController::class, 'index']);
     Route::get('/webinar/{id}', [WebinarController::class, 'show']);
     Route::post('/webinar', [WebinarController::class, 'store']);
     Route::put('/webinar/{id}', [WebinarController::class, 'update']);
     Route::delete('/webinar/{id}', [WebinarController::class, 'delete']);
+
 
 
 

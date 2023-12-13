@@ -23,17 +23,6 @@ class KursusController extends Controller
                 'author' => 'required',
                 'thumbnail' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             ],
-            [
-                'title.required' => 'Title harus diisi!',
-                'bahasa_pemrograman.required' => 'Bahasa Pemrograman harus diisi!',
-                'content.required' => 'Content harus diisi!',
-                'author.required' => 'Author harus diisi!',
-                'thumbnail.required' => 'Thumbnail harus diisi!',
-                'thumbnail.image' => 'Thumbnail harus berupa gambar!',
-                'thumbnail.mimes' => 'Thumbnail harus berupa gambar dengan format jpeg, png, jpg, gif, svg!',
-                'thumbnail.max' => 'Thumbnail maksimal 2048kb!',
-
-            ]
         );
 
         if ($validation->fails()) {
@@ -64,11 +53,8 @@ class KursusController extends Controller
                 'content' => $request->content,
                 'author' => $request->author,
                 'thumbnail' => $filename,
+                'id_pembelian' => null,
             ]);
-
-
-
-
             return response()->json([
                 'status' => 201,
                 'message' => 'Kursus created',
@@ -193,5 +179,26 @@ class KursusController extends Controller
             ], 401);
         }
 
+    }
+
+    public function findByBahasa($bahasa)
+    {
+        $kursus = Kursus::where('bahasa_pemrograman', $bahasa)->get();
+
+        $kursus->map(function ($item) {
+            $item->thumbnail = url('storage/thumbnail/' . $item->thumbnail);
+            return $item;
+        });
+        try {
+            return response()->json([
+                'status' => 200,
+                'kursus' => $kursus,
+            ], 200);
+        } catch (\Throwable $th) {
+            return response()->json([
+                'status' => 401,
+                'message' => "Error",
+            ], 401);
+        }
     }
 }

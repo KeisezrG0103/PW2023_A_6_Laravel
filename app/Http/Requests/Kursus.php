@@ -47,6 +47,7 @@ class Kursus extends FormRequest
             'title.required' => 'Title harus diisi!',
             'content.required' => 'Content harus diisi!',
             'pengisi_acara.required' => 'Pengisi Acara harus diisi!',
+            'harga.required' => 'Harga harus diisi!',
             'thumbnail.required' => 'Thumbnail harus diisi!',
             'thumbnail.image' => 'Thumbnail harus berupa gambar!',
             'thumbnail.mimes' => 'Thumbnail harus berupa gambar dengan format jpeg, png, jpg, gif, svg!',
