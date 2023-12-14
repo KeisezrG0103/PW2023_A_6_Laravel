@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Webinar;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Storage;
+use App\Models\User;
 
 class WebinarController extends Controller
 {
@@ -168,6 +169,7 @@ class WebinarController extends Controller
             ], 401);
         }
     }
+
 
 
 }

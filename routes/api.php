@@ -7,6 +7,7 @@ use App\Http\Controllers\api\UserController;
 use App\Http\Controllers\api\KursusController;
 use App\Http\Controllers\api\WebinarController;
 use App\Http\Controllers\api\Subscription;
+use App\Http\Controllers\api\IkutWebinarController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,7 +46,8 @@ Route::group(['middleware' => ['auth:api']], function () {
     Route::get('/user', [UserController::class, 'getUserLoggedIn']);
     Route::put('/user', [UserController::class, 'updateProfile']);
 
-    Route::get('/webinar/user', [WebinarController::class, 'showAllWebinarByUser']);
-    Route::post('/webinar/user', [WebinarController::class, 'ikutWebinar']);
+    Route::get('/webinar/user/{id}', [IkutWebinarController::class, 'showAllWebinarByUser']);
+    Route::post('/webinar/user', [IkutWebinarController::class, 'ikutWebinar']);
+    Route::get('/webinar/user/{id_user}/{id_webinar}', [IkutWebinarController::class, 'isRegistered']);
 
 });
