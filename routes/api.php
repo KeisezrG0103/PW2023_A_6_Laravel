@@ -45,7 +45,7 @@ Route::group(['middleware' => ['auth:api']], function () {
     Route::get('/user', [UserController::class, 'getUserLoggedIn']);
     Route::put('/user', [UserController::class, 'updateProfile']);
 
-
-
+    Route::get('/webinar/user', [WebinarController::class, 'showAllWebinarByUser']);
+    Route::post('/webinar/user', [WebinarController::class, 'ikutWebinar']);
 
 });
