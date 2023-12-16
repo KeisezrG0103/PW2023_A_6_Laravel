@@ -71,12 +71,12 @@ class AuthController extends Controller
 
         if (auth()->attempt($request->all())) {
             $user = auth()->user();
-            //$token = $user->createToken('token')->accessToken;
+            $token = $user->createToken('token')->accessToken;
             if ($user->active) {
                 return response()->json([
                     'message' => 'User login successful!',
                     'user' => $user,
-                    //'token' => $token
+                    'token' => $token
                 ], 201);
             } else {
                 Auth::logout();
@@ -85,7 +85,7 @@ class AuthController extends Controller
                 ], 401);
             }
 
-            
+
         } else {
             return response()->json([
                 'message' => 'User login failed!',
