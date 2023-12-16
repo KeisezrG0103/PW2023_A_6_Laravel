@@ -17,9 +17,13 @@ return new class extends Migration
             $table->string('email', 64)->unique();
             $table->string('password', 64);
             $table->string('education');
+            $table->string('verify_key');
+            $table->integer('active')->nullable();
             $table->string('coding_experience');
             $table->string('role')->default('user');
-            $table->timestamp('email_verified_at');
+            $table->timestamps();
+            $table->timestamp('email_verified_at')->nullable();
+            $table->rememberToken();
         });
     }
 

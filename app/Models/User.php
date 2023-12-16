@@ -23,13 +23,13 @@ class User extends Authenticatable
     public $timestamps = false;
     protected $fillable = [
         'username',
-        'id_pembelian',
         'email',
         'password',
         'education',
         'coding_experience',
         'role',
-        'email_verified_at',
+        'verify_key',
+        'active',
     ];
 
     /**
