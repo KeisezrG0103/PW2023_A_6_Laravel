@@ -1,5 +1,6 @@
 # UAS Pemrograman Web Gasal 2023/2024
-
+- database => pw.sql
+- Fix ERR_CERT_COMMON_NAME_INVALID => klik tubes23.online -> advance -> proceed
 ## Kelas A - Kelompok 6
 
 ### Anggota Kelompok:
