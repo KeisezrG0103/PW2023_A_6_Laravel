@@ -58,7 +58,7 @@
   - PUT /api/user - Update data user/ edit profile user
   - GET /api/webinar/user/{id} - Get data webinar yang didaftar oleh user
   - POST /api/webinar/user - Create ikut webinar untuk user yang sedang login
-  - GET /api//webinar/user/{id_user}/{id_webinar} - Get data webinar yang sudah didaftarkan oleh user sehingga tidak dapat melakukan pendaftaran kembali
+  - GET /api/webinar/user/{id_user}/{id_webinar} - Get data webinar yang sudah didaftarkan oleh user sehingga tidak dapat melakukan pendaftaran kembali
 
 - **React:**
   - Link Repository: [https://github.com/KeisezrG0103/PW2023_A_6_React.git](https://github.com/KeisezrG0103/PW2023_A_6_React.git)
