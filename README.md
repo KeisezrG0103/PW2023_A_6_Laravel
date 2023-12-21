@@ -2,6 +2,7 @@
 - database => pw.sql
 - Fix ERR_CERT_COMMON_NAME_INVALID => klik tubes23.online -> advance -> proceed
 - ENV mail
+  
 MAIL_MAILER=smtp
 
 MAIL_HOST=smtp.gmail.com
