@@ -90,6 +90,30 @@ class UserController extends Controller
         }
     }
 
+    public function getUser($id)
+    {
+        $user = User::find($id);
+
+        if ($user->photo != null) {
+            $user->photo = url('storage/user/' . $user->photo);
+        } else {
+            $user->photo = url('storage/default/user.png');
+        }
+
+
+        try {
+            return response()->json([
+                'status' => 200,
+                'user' => $user,
+            ], 200);
+        } catch (\Throwable $th) {
+            return response()->json([
+                'status' => 401,
+                'message' => "Error",
+            ], 401);
+        }
+    }
+
     public function updateProfile(Request $request)
     {
         $user = auth()->user();

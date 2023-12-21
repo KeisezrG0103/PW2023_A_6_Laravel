@@ -28,6 +28,7 @@ Route::group(['middleware' => ['auth:api']], function () {
     Route::get('/admin', [UserController::class, 'isAdmin']);
     Route::get('/users', [UserController::class, 'getAllUsers']);
     Route::delete('/user/{id}', [UserController::class, 'deleteUser']);
+    Route::get('/get_user/{id}', [UserController::class , 'getUser']);
 
     Route::post('/kursus', [KursusController::class, 'create']);
     Route::get('/kursus', [KursusController::class, 'readAll']);
