@@ -62,3 +62,14 @@
 
 - **React:**
   - Link Repository: [https://github.com/KeisezrG0103/PW2023_A_6_React.git](https://github.com/KeisezrG0103/PW2023_A_6_React.git)
+ 
+Config Mail 
+
+MAIL_MAILER=smtp
+MAIL_HOST=smtp.gmail.com
+MAIL_PORT=587
+MAIL_USERNAME=josephzord123@gmail.com
+MAIL_PASSWORD=jngpwwnkzvdydegt
+MAIL_ENCRYPTION=ssl
+MAIL_FROM_ADDRESS="josephzord123@gmail.com"
+MAIL_FROM_NAME="${APP_NAME}"
