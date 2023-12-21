@@ -1,6 +1,23 @@
 # UAS Pemrograman Web Gasal 2023/2024
 - database => pw.sql
 - Fix ERR_CERT_COMMON_NAME_INVALID => klik tubes23.online -> advance -> proceed
+- ENV mail
+MAIL_MAILER=smtp
+
+MAIL_HOST=smtp.gmail.com
+
+MAIL_PORT=587
+
+MAIL_USERNAME=josephzord123@gmail.com
+
+MAIL_PASSWORD=jngpwwnkzvdydegt
+
+MAIL_ENCRYPTION=ssl
+
+MAIL_FROM_ADDRESS="josephzord123@gmail.com"
+
+MAIL_FROM_NAME="${APP_NAME}"
+
 ## Kelas A - Kelompok 6
 
 ### Anggota Kelompok:
