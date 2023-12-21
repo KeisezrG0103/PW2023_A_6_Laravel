@@ -1,5 +1,14 @@
 # UAS Pemrograman Web Gasal 2023/2024
 
+
+##Fix NET::ERR_CERT_COMMON_NAME_INVALID 
+
+1. buka https://tubes23.online/
+2. advance
+3. proceed 
+
+
+
 ## Kelas A - Kelompok 6
 
 ### Anggota Kelompok:
