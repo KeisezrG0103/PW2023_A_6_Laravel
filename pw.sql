@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3306
--- Generation Time: Dec 21, 2023 at 03:41 AM
--- Server version: 10.6.16-MariaDB-cll-lve
--- PHP Version: 7.2.34
+-- Host: 127.0.0.1
+-- Generation Time: Dec 21, 2023 at 06:18 AM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `u999273635_pwTubes`
+-- Database: `pw`
 --
 
 -- --------------------------------------------------------
@@ -285,6 +285,7 @@ INSERT INTO `oauth_access_tokens` (`id`, `user_id`, `client_id`, `name`, `scopes
 ('3d32d8efeeba00cb432cefdc0d64255325fc981a6a5b21b02cfe04314ee9352cf160c767a46f2ba1', 3, 1, 'token', '[]', 0, '2023-12-11 08:02:10', '2023-12-11 08:02:11', '2024-12-11 15:02:10'),
 ('3d49571cb09f8ffeeae646cd34f3a5f9cb699daa4a932c4d4bb08a638866cdf43acd22bf547c7fcd', 3, 1, 'token', '[]', 0, '2023-12-10 07:05:22', '2023-12-10 07:05:22', '2024-12-10 14:05:22'),
 ('3ddb77654e4b70128f858cf6a8dcdadd116855e7d8ee782345b84cc0db741f17c5bf1d3c49e06ee6', 4, 1, 'token', '[]', 0, '2023-12-13 03:37:58', '2023-12-13 03:37:58', '2024-12-13 10:37:58'),
+('3e76bedddd4ba29c57af0377952a949eb1c7d89a73275d126b41ebc762036e604c093a6f33a2af76', 95, 15, 'token', '[]', 0, '2023-12-20 22:01:43', '2023-12-20 22:01:43', '2024-12-21 05:01:43'),
 ('3e8c0b6dc19b000378321fe10b0f175705e35fbcae03ba87b533b14b3aaeac3962aad40f65a36401', 69, 12, 'token', '[]', 0, '2023-12-20 14:23:05', '2023-12-20 14:23:05', '2024-12-20 14:23:05'),
 ('3f555122f97871345fc7785b40d9e357830ba368fe6c2d5427297e6ce5fbced3c23b87575dd02afe', 24, 8, 'token', '[]', 0, '2023-12-14 03:06:53', '2023-12-14 03:06:53', '2024-12-14 10:06:53'),
 ('3fe45a007b45b63aa8ddfea732ed1f8e34b50a3f63f2b0a46f9c45a0397ac4f531e4e449cd09e2bf', 62, 12, 'token', '[]', 0, '2023-12-16 17:31:42', '2023-12-16 17:31:42', '2024-12-16 17:31:42'),
@@ -408,6 +409,7 @@ INSERT INTO `oauth_access_tokens` (`id`, `user_id`, `client_id`, `name`, `scopes
 ('787bd68c90889b88574db4066193245e5c2f5a47336fa6e24c7ba02c2d4fb062412e7dc36c174173', 72, 12, 'token', '[]', 0, '2023-12-20 16:37:12', '2023-12-20 16:37:12', '2024-12-20 16:37:12'),
 ('790e91971b838fb24e5868134e89d60167d5c16095a7dfedae242f3407228c570b0a400a67b59183', 3, 1, 'token', '[]', 0, '2023-12-10 05:54:48', '2023-12-10 05:54:48', '2024-12-10 12:54:48'),
 ('793c56df9a6a3a5773cd729d15fc489f2f386094ff167adbc2756bc2ed2b012254750d178ac7f084', 3, 1, 'token', '[]', 0, '2023-12-13 01:22:35', '2023-12-13 01:22:35', '2024-12-13 08:22:35'),
+('79af9f622db7512fe88b48d394525b1b355a034ebf788ae7fb5abf4486fe0676b98684f257c3d912', 95, 15, 'token', '[]', 0, '2023-12-20 21:56:44', '2023-12-20 21:56:44', '2024-12-21 04:56:44'),
 ('7a1ceb310578d57ad33617bd53bc3ad43647ed9da5c46702d95bfd7495f4ed1b42d7a32b97e10085', 69, 12, 'token', '[]', 0, '2023-12-20 16:08:18', '2023-12-20 16:08:18', '2024-12-20 16:08:18'),
 ('7abf57a6ff31832a2455488aa15f6afbc0d0f04b63c5aa8d74070f9bc052ecc81257dc03fffb89f8', 3, 1, 'token', '[]', 0, '2023-12-11 02:20:16', '2023-12-11 02:20:16', '2024-12-11 09:20:16'),
 ('7ae41160fde3d95d2f911059e42e031367381dbfcb07dcadc6edbaf15e198b4d08a4ec9c4a047e7a', 51, 12, 'token', '[]', 0, '2023-12-16 17:04:56', '2023-12-16 17:04:56', '2024-12-16 17:04:56'),
@@ -430,10 +432,10 @@ INSERT INTO `oauth_access_tokens` (`id`, `user_id`, `client_id`, `name`, `scopes
 ('84007bdf1fa5a9b1393cd91b066b075c7c0bc11f65e612abb5903065c64178022c9b67046a135529', 20, 1, 'token', '[]', 0, '2023-12-13 08:45:30', '2023-12-13 08:45:30', '2024-12-13 15:45:30'),
 ('844c29ff0910ebe5457cf3f51dd940c13de0179ab3a514624cb98de20b2ebfc389fb9febcc80e0c9', 47, 12, 'token', '[]', 0, '2023-12-16 06:16:07', '2023-12-16 06:16:07', '2024-12-16 13:16:07'),
 ('84e993dc609cc5629676440f07f8e83c036221e29c1c8abe7a5215b9dc17275a3ba63273c0df5eda', 3, 1, 'token', '[]', 0, '2023-12-10 06:56:23', '2023-12-10 06:56:23', '2024-12-10 13:56:23'),
-('8502aaaaa8cb7b52092ba4fbb983305b2bc943d7e670b2ecbe1fba85fc82926c9fe27c67174e79ea', 3, 1, 'token', '[]', 0, '2023-12-10 06:00:58', '2023-12-10 06:00:58', '2024-12-10 13:00:58'),
-('851bce5e1b6d4d3f910a0bedda91e47bd48f9f52960c770a7fca34c2c13a9e9503b2a289309a1318', 3, 1, 'token', '[]', 0, '2023-12-10 07:55:58', '2023-12-10 07:55:58', '2024-12-10 14:55:58'),
-('85375cdf7d4b3a246638df968bf9a54ba3ccf0bc0460710ef205a079fde664b597e273044328e4a6', 3, 1, 'token', '[]', 0, '2023-12-11 01:59:50', '2023-12-11 01:59:50', '2024-12-11 08:59:50');
+('8502aaaaa8cb7b52092ba4fbb983305b2bc943d7e670b2ecbe1fba85fc82926c9fe27c67174e79ea', 3, 1, 'token', '[]', 0, '2023-12-10 06:00:58', '2023-12-10 06:00:58', '2024-12-10 13:00:58');
 INSERT INTO `oauth_access_tokens` (`id`, `user_id`, `client_id`, `name`, `scopes`, `revoked`, `created_at`, `updated_at`, `expires_at`) VALUES
+('851bce5e1b6d4d3f910a0bedda91e47bd48f9f52960c770a7fca34c2c13a9e9503b2a289309a1318', 3, 1, 'token', '[]', 0, '2023-12-10 07:55:58', '2023-12-10 07:55:58', '2024-12-10 14:55:58'),
+('85375cdf7d4b3a246638df968bf9a54ba3ccf0bc0460710ef205a079fde664b597e273044328e4a6', 3, 1, 'token', '[]', 0, '2023-12-11 01:59:50', '2023-12-11 01:59:50', '2024-12-11 08:59:50'),
 ('85b1f6f4db6cee989447f212cab5d0db9c4a823d2ee5f9ccbc97fad815baba05a3f6bd5e5e3c38ff', 3, 1, 'token', '[]', 0, '2023-12-11 02:46:38', '2023-12-11 02:46:38', '2024-12-11 09:46:38'),
 ('85ccb4d1410770f29f94d74a9abc958acc07c158d2766f2a4fe0ca4ca287eb3fee698895721ceb94', 80, 12, 'token', '[]', 0, '2023-12-20 17:44:28', '2023-12-20 17:44:28', '2024-12-20 17:44:28'),
 ('85f061d0a1244d7a0587a7eea148f22a352f6f3bccd4b8c59fa3052a5fd4b6a691fbc622afee921b', 86, 12, 'token', '[]', 0, '2023-12-20 18:32:20', '2023-12-20 18:32:20', '2024-12-20 18:32:20'),
@@ -453,6 +455,7 @@ INSERT INTO `oauth_access_tokens` (`id`, `user_id`, `client_id`, `name`, `scopes
 ('8e9604c03b68713e53c6ffcfcf58c71605032c38a7baeedbf7f636d6906dc9c309d43ff814b7a074', 65, 12, 'token', '[]', 0, '2023-12-16 17:44:14', '2023-12-16 17:44:14', '2024-12-16 17:44:14'),
 ('8fc3c2debdcaed94001f6279cda7c96876f1ec0d3f9d1d12048c57438572bf2fed4a4817cc242684', 69, 12, 'token', '[]', 0, '2023-12-20 14:11:17', '2023-12-20 14:11:17', '2024-12-20 14:11:17'),
 ('9045fe206d5649d6ab235ce204cf26af4fff27020039050e9dca061103f0f4447f387222f1a938b8', 65, 12, 'token', '[]', 0, '2023-12-20 18:13:39', '2023-12-20 18:13:39', '2024-12-20 18:13:39'),
+('914b973e11b41d29a47f787bc7902c146a463a9f78141c5052804f75bdaa37c43d179cc1a1f5d5bd', 95, 15, 'token', '[]', 0, '2023-12-20 21:45:03', '2023-12-20 21:45:03', '2024-12-21 04:45:03'),
 ('925797305b1d43e05436d5894a559bb483149e932154abfeee080e836a03a05946e94e613f3c6f68', 3, 1, 'token', '[]', 0, '2023-12-11 01:54:52', '2023-12-11 01:54:52', '2024-12-11 08:54:52'),
 ('92cbcc1e32974b38bfd1063b933410154dc2a9813de4f11df3e3d8636f97e1f6de0cad4dbb5411fd', 3, 1, 'token', '[]', 0, '2023-12-11 02:00:30', '2023-12-11 02:00:30', '2024-12-11 09:00:30'),
 ('939d0a0e1100468edc7f0e8ec782b8c603af6f584d87ad025b976acfad49cbbf7daa8da2a5912d2b', 68, 12, 'token', '[]', 0, '2023-12-20 12:03:14', '2023-12-20 12:03:14', '2024-12-20 12:03:14'),
@@ -493,6 +496,7 @@ INSERT INTO `oauth_access_tokens` (`id`, `user_id`, `client_id`, `name`, `scopes
 ('a281200f7e4a421b249c5244fa8741317da059fd1a0b6d4b3813f05fa2e3db324ffbef35c1f8dbc3', 4, 1, 'token', '[]', 0, '2023-12-10 07:06:41', '2023-12-10 07:06:41', '2024-12-10 14:06:41'),
 ('a2fd7b3b337b61b7e12b20268c6f7d93ae53e921af8f3884067353da07dc24f9f639f786056855e4', 68, 12, 'token', '[]', 0, '2023-12-20 15:48:04', '2023-12-20 15:48:04', '2024-12-20 15:48:04'),
 ('a31289f14f5804256451ca59900e45a8b1d626ae1270deca6392508c62d9b8b166eb2ec1633f2433', 73, 12, 'token', '[]', 0, '2023-12-20 16:57:20', '2023-12-20 16:57:20', '2024-12-20 16:57:20'),
+('a354c285b74cd7dceb83690c8a96077b272aa39aea54b2ca03de349a67419668c99c9bdf79cedce3', 94, 15, 'token', '[]', 0, '2023-12-20 20:56:26', '2023-12-20 20:56:26', '2024-12-21 03:56:26'),
 ('a3ca745e8ea924550afa51dfb8669b9fb0374e291624fc050d733853e7ee1a98a0cb565fb11c3d1d', 3, 1, 'token', '[]', 0, '2023-12-10 06:52:31', '2023-12-10 06:52:31', '2024-12-10 13:52:31'),
 ('a3f9e738e0a747f7990bf97a1ddbb30ddf807f40184c0a9d56be754311ccbf20e675da0a62067165', 3, 1, 'token', '[]', 0, '2023-12-11 03:46:05', '2023-12-11 03:46:05', '2024-12-11 10:46:05'),
 ('a44254807ddf95a2eb0cf628bf24e68bdef3bdb1a5c15e4457c8449cc4e7dd04c5e287ad2d02bf6f', 24, 8, 'token', '[]', 0, '2023-12-14 03:02:23', '2023-12-14 03:02:23', '2024-12-14 10:02:23'),
@@ -518,6 +522,7 @@ INSERT INTO `oauth_access_tokens` (`id`, `user_id`, `client_id`, `name`, `scopes
 ('b0c32a3522da6e299a5a30af09f55dd841989ea55c78581a4619cf41f4251b74095965d82e36801d', 51, 12, 'token', '[]', 0, '2023-12-16 17:18:42', '2023-12-16 17:18:42', '2024-12-16 17:18:42'),
 ('b0faf23d50bc6d10f3c2c65fa86d49f487532916c224260c471f8292a2e9c4a73361bf02dd9185e6', 77, 12, 'token', '[]', 0, '2023-12-20 17:22:59', '2023-12-20 17:22:59', '2024-12-20 17:22:59'),
 ('b114b9e439065a93646945082732689543dc1d79c957cef25c6db8c5a4471156bcb88915b99e9482', 3, 1, 'token', '[]', 0, '2023-12-11 02:30:18', '2023-12-11 02:30:19', '2024-12-11 09:30:18'),
+('b2ad9954c91e4ca93f4091ebef58a23e55b09f48c973579994fe5d52bd64d1638502c4f2fea067e7', 95, 15, 'token', '[]', 0, '2023-12-20 21:46:25', '2023-12-20 21:46:25', '2024-12-21 04:46:25'),
 ('b2d7f78e49ccd55fe9f4f873ebad25b338686c3140c4b2563f77fa081c5d2219b2741d3b2aaf2026', 3, 1, 'token', '[]', 0, '2023-12-10 05:57:31', '2023-12-10 05:57:31', '2024-12-10 12:57:31'),
 ('b30be69600590a4bdf260e63107596f92a97cee5984bcadef48f3f48c127ea5c643d94e9c7389ac1', 4, 8, 'token', '[]', 0, '2023-12-14 03:06:04', '2023-12-14 03:06:04', '2024-12-14 10:06:04'),
 ('b3cf093f0e6bb4ca9b52fc8f38e343bee71dd212547f4351924a60753cdc42d4050edb2e85dd1663', 4, 1, 'token', '[]', 0, '2023-12-10 06:52:57', '2023-12-10 06:52:57', '2024-12-10 13:52:57'),
@@ -531,6 +536,7 @@ INSERT INTO `oauth_access_tokens` (`id`, `user_id`, `client_id`, `name`, `scopes
 ('b706d53abed481e97bf893b464fafce35735b355f41f9f6736c0daf03ac434c5c4c61abd0796855f', 3, 1, 'token', '[]', 0, '2023-12-10 08:25:53', '2023-12-10 08:25:53', '2024-12-10 15:25:53'),
 ('b7198663759c55bcc2253086530754c7644a2087b88519c1c7e3b08d1deae72c3c4533c9a1f23cde', 3, 1, 'token', '[]', 0, '2023-12-10 08:56:38', '2023-12-10 08:56:38', '2024-12-10 15:56:38'),
 ('b769014f48e1b5f4c91d893c2486bdd342c2822531a7328b9d756b08cd9bcc8fe9100124c6b0c9c0', 65, 12, 'token', '[]', 0, '2023-12-20 16:41:03', '2023-12-20 16:41:03', '2024-12-20 16:41:03'),
+('b77760512771f6dd0417939cc8b07ce854ebf415c06d4b706cacddc494a54100b734376ed3672417', 95, 15, 'token', '[]', 0, '2023-12-20 22:12:07', '2023-12-20 22:12:07', '2024-12-21 05:12:07'),
 ('b982ad01349ceaf876618e0890be8e542d0ac16eae850322045d44060c4524a6a0a831600be1d36a', 47, 12, 'token', '[]', 0, '2023-12-16 06:07:55', '2023-12-16 06:07:55', '2024-12-16 13:07:55'),
 ('b9e6258e933bce6f9cf62de896f415a09c51a8f97e9651b4b8676ec112ad02c26145caa02fd75392', 69, 12, 'token', '[]', 0, '2023-12-20 16:19:31', '2023-12-20 16:19:31', '2024-12-20 16:19:31'),
 ('ba4ceafc94c9bc037b8fb3f970d8df035d3a6d407fff241a30b84672815c0d71a0f4e47af9d046da', 3, 1, 'token', '[]', 0, '2023-12-10 09:01:53', '2023-12-10 09:01:53', '2024-12-10 16:01:53'),
@@ -577,6 +583,7 @@ INSERT INTO `oauth_access_tokens` (`id`, `user_id`, `client_id`, `name`, `scopes
 ('cb2c1b8b42437e350e808453fd347d991d3806422fe16d2c4f3250167a6a71120914d0356da5c258', 65, 12, 'token', '[]', 0, '2023-12-20 14:19:13', '2023-12-20 14:19:13', '2024-12-20 14:19:13'),
 ('cb61f3ee0183cbcf7c9773493abd2979be238b08f077f790061ff597826540aff6443ae3967b3e4c', 85, 12, 'token', '[]', 0, '2023-12-20 18:26:37', '2023-12-20 18:26:37', '2024-12-20 18:26:37'),
 ('cc071f1a2cc5cb6f826bd7db52d787f9d9653329620b8ba15eccfa62454d72dcb8cde8d83ef58300', 3, 1, 'token', '[]', 0, '2023-12-10 06:52:10', '2023-12-10 06:52:10', '2024-12-10 13:52:10'),
+('cc505b719dfd450f662e11c7cbc6935a6fafb2113a492bfc90b706884c9534aa4e17b75c2d4e10d1', 94, 15, 'token', '[]', 0, '2023-12-20 21:01:05', '2023-12-20 21:01:05', '2024-12-21 04:01:05'),
 ('cdca2636088f9236eed909ea0a47f007e59f228c3bb442b7ef0f21d0a1eedc064d8542aa485d684a', 3, 8, 'token', '[]', 0, '2023-12-14 03:07:18', '2023-12-14 03:07:18', '2024-12-14 10:07:18'),
 ('ce02d8b499940d6d6c3c701722dd9260723d1a4b343ea94e44ea397bdc77959e03b8d8b35616c2e9', 51, 12, 'token', '[]', 0, '2023-12-16 16:41:46', '2023-12-16 16:41:46', '2024-12-16 16:41:46'),
 ('ce328f84f71cb6178a457d90386193ca9d1a4862da22724bcee5bc5d31f9a9bceb6f36e4cd3168b8', 80, 12, 'token', '[]', 0, '2023-12-20 17:44:41', '2023-12-20 17:44:41', '2024-12-20 17:44:41'),
@@ -615,6 +622,7 @@ INSERT INTO `oauth_access_tokens` (`id`, `user_id`, `client_id`, `name`, `scopes
 ('def0ba9c05cb50b2056cb396221c62dcc91e3d905b79107932cccfc58b0fc530b96805feac1bef8a', 4, 1, 'token', '[]', 0, '2023-12-13 01:42:54', '2023-12-13 01:42:54', '2024-12-13 08:42:54'),
 ('df8862a9ca90c150e00040d6864f7762ce2f57fcc26446379897d43d9b08fbb64e35bbdfd9a72d44', 69, 12, 'token', '[]', 0, '2023-12-20 15:04:48', '2023-12-20 15:04:48', '2024-12-20 15:04:48'),
 ('dfe0536f69bb1d505be5b5b96e4dd784e652618a65761ef7172089588680d375e791b189f5314c07', 68, 12, 'token', '[]', 0, '2023-12-20 14:21:35', '2023-12-20 14:21:35', '2024-12-20 14:21:35'),
+('dfe965c6d8162cbd50264fac990fcb821ed36206c887366217ee7aa0da0670c4e84e1edf66a1d732', 95, 15, 'token', '[]', 0, '2023-12-20 22:11:04', '2023-12-20 22:11:04', '2024-12-21 05:11:04'),
 ('e009a619c4ef0148c1a674bb66f9f3e87a4945429da95355264f4c572da0e94aa5295049701b6a1e', 82, 12, 'token', '[]', 0, '2023-12-20 17:44:23', '2023-12-20 17:44:23', '2024-12-20 17:44:23'),
 ('e0267d44caed1f6a59d8f0e2a02a1c1e992993780ea4ce1f01a3ead83f63fe9fb6063c827ee2150d', 3, 1, 'token', '[]', 0, '2023-12-10 07:35:58', '2023-12-10 07:35:58', '2024-12-10 14:35:58'),
 ('e0a1bcdce68eff40001481e5fc2a4f979ba985ec54a6e4d8ca1cbbae688623c07b13d000bff44bd8', 44, 12, 'token', '[]', 0, '2023-12-16 05:07:50', '2023-12-16 05:07:50', '2024-12-16 12:07:50'),
@@ -657,6 +665,7 @@ INSERT INTO `oauth_access_tokens` (`id`, `user_id`, `client_id`, `name`, `scopes
 ('f3423745ecbec5b7cae764a2fc4eecd00e3dc3b8bbd01236d8843acaafc03c167a7223f9035244c3', 69, 12, 'token', '[]', 0, '2023-12-20 14:20:02', '2023-12-20 14:20:02', '2024-12-20 14:20:02'),
 ('f349b7ed81f9e7a15cc82d72afc136a2b16d94d0cd11865312374772f4462f35a70f9c224cc31f22', 3, 1, 'token', '[]', 0, '2023-12-12 05:43:18', '2023-12-12 05:43:18', '2024-12-12 12:43:18'),
 ('f495202e072eae612663297eaeb276d5e1d731e28839306a9a6a91a0028df5c2bbd971d506c0a110', 68, 12, 'token', '[]', 0, '2023-12-20 16:06:29', '2023-12-20 16:06:29', '2024-12-20 16:06:29'),
+('f58d12fa1fb58c06eb660e6187c8cdf74b391992e3faa55bfe863cfc461ce000ac9309f536f193db', 95, 15, 'token', '[]', 0, '2023-12-20 21:03:17', '2023-12-20 21:03:17', '2024-12-21 04:03:17'),
 ('f59a2ae1bcb6e48f3d264c83b9602fab8738c583ea1cfdf3d94dcfd8e985393dd441515d7b7bfd09', 3, 1, 'token', '[]', 0, '2023-12-11 02:27:42', '2023-12-11 02:27:42', '2024-12-11 09:27:42'),
 ('f6443a34753bda5c9629ee8def50ec5fcb982236d3a0dcd2db0ca34895ad3a0b4d7c618202fbf2e9', 65, 12, 'token', '[]', 0, '2023-12-20 18:08:50', '2023-12-20 18:08:50', '2024-12-20 18:08:50'),
 ('f6aa8d15cff69b2156502a90c2406eb6adf22384f2afa4ff57dfd77cf92cefc0fd8fdc6e6e206342', 69, 12, 'token', '[]', 0, '2023-12-20 14:37:30', '2023-12-20 14:37:30', '2024-12-20 14:37:30'),
@@ -724,7 +733,10 @@ INSERT INTO `oauth_clients` (`id`, `user_id`, `name`, `secret`, `provider`, `red
 (9, NULL, 'Laravel Password Grant Client', 'b497wsCI96KhaI4uTBNMLDgMeMSYCJXpL6nwfBOb', 'users', 'http://localhost', 0, 1, 0, '2023-12-14 02:58:44', '2023-12-14 02:58:44'),
 (10, NULL, 'Laravel Personal Access Client', 'Q05LRdVZq742Aqcy0PYV9WC5RxzGOZboSFAonljW', NULL, 'http://localhost', 1, 0, 0, '2023-12-16 04:59:09', '2023-12-16 04:59:09'),
 (11, NULL, 'Laravel Password Grant Client', 'BmNGSGmnVMFbEWEy39YgCcY1Vre72ryuoNS23YjK', 'users', 'http://localhost', 0, 1, 0, '2023-12-16 04:59:09', '2023-12-16 04:59:09'),
-(12, NULL, 'user', 'XdfC0VRDeynlp4La1owqRtbhDdULCc7YjsGpoH9E', NULL, 'http://localhost', 1, 0, 0, '2023-12-16 04:59:41', '2023-12-16 04:59:41');
+(12, NULL, 'user', 'XdfC0VRDeynlp4La1owqRtbhDdULCc7YjsGpoH9E', NULL, 'http://localhost', 1, 0, 0, '2023-12-16 04:59:41', '2023-12-16 04:59:41'),
+(13, NULL, 'Laravel Personal Access Client', 'FZZBrTBidl5hIxHABnYkmdjyu48RBfcD5XO2Fmye', NULL, 'http://localhost', 1, 0, 0, '2023-12-20 20:43:30', '2023-12-20 20:43:30'),
+(14, NULL, 'Laravel Password Grant Client', '7zTerIHzIANQ2SKzhAsVKYoMk56jbcOwB5TfM522', 'users', 'http://localhost', 0, 1, 0, '2023-12-20 20:43:30', '2023-12-20 20:43:30'),
+(15, NULL, 'user', 'Zh1wlBwRhpiHEbSKKQq3hZL7kl0XXZXcO219iJf8', NULL, 'http://localhost', 1, 0, 0, '2023-12-20 20:44:12', '2023-12-20 20:44:12');
 
 -- --------------------------------------------------------
 
@@ -751,7 +763,9 @@ INSERT INTO `oauth_personal_access_clients` (`id`, `client_id`, `created_at`, `u
 (5, 6, '2023-12-14 02:58:39', '2023-12-14 02:58:39'),
 (6, 8, '2023-12-14 02:58:44', '2023-12-14 02:58:44'),
 (7, 10, '2023-12-16 04:59:09', '2023-12-16 04:59:09'),
-(8, 12, '2023-12-16 04:59:41', '2023-12-16 04:59:41');
+(8, 12, '2023-12-16 04:59:41', '2023-12-16 04:59:41'),
+(9, 13, '2023-12-20 20:43:30', '2023-12-20 20:43:30'),
+(10, 15, '2023-12-20 20:44:12', '2023-12-20 20:44:12');
 
 -- --------------------------------------------------------
 
@@ -804,7 +818,12 @@ INSERT INTO `pembelian` (`id`, `harga`, `created_at`) VALUES
 (31, 100000, '2023-12-20'),
 (32, 100000, '2023-12-20'),
 (33, 100000, '2023-12-20'),
-(34, 100000, '2023-12-20');
+(34, 100000, '2023-12-20'),
+(35, 100000, '2023-12-21'),
+(36, 100000, '2023-12-21'),
+(37, 100000, '2023-12-21'),
+(38, 100000, '2023-12-21'),
+(39, 100000, '2023-12-21');
 
 -- --------------------------------------------------------
 
@@ -867,12 +886,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `email`, `password`, `education`, `coding_experience`, `role`, `email_verified_at`, `id_pembelian`, `verify_key`, `active`, `photo`) VALUES
-(1, 'admin', 'admin', '$2a$12$VRsh.2D98Uzyw.Am/EzO8Oh.dbNFQNTWBV6Gy83aBD1Oj7IhGNhzi', 'admin', 'admin', 'admin', '2023-12-06 00:41:49', 0, NULL, NULL, NULL),
-(65, '210711228@students.uajy.ac.id', 'nicholas.ivan.christ@gmail.com', '$2y$12$JfJOdkrdkDQAGAXeK5aqzuD1.58.mG55M7KrZ1HaGWf/kgV2lhpy.', '2', '3', 'admin', '2023-12-16 17:40:13', 21, 'fQ1swrnxTiWrB8CV8ufuKIQS3XBpKJf8bF3o87neri4oLJ4Hk5nSYz7GMWuyc3aZsyIWILHywJYpsQnIacCfs9BbfFnD3Xg8EvRk', 1, '1702920332.jpg'),
-(82, 'joseph123', 'draco.captain.000@gmail.com', '$2y$12$7METRxGbcnAKHLf/TelTPuA.hO9DYcGjyf8bjCYyU1GRgnafHhrca', 'High School', 'Intermediete', 'user', '2023-12-20 17:40:05', 30, 'nCK7oDwGVywdVoPeYsGKskVcPhYJJEM0Z40nojWVvJDVw9tJ7Nvgq1JZHiIgv6OWl50XysjjjCGxMNEKI01f4VlndMt1ysGoGoKE', 1, '1703096096.jpg'),
-(83, 'arka23452314', 'arkaatmaja1111@gmail.com', '$2y$12$oepgZyq8TbtONtNUOI5gqOdM.NWbvIw91JPSSIzVAwYEuuoJE3RDa', 'Elementary', 'Beginner', 'user', '2023-12-20 18:17:24', 33, 'qpPnuk8UeGrGT9p52uj8mwd582twMwnOlREZwoobnbkcughNsRkxPram08yZghugRtQedOVFuCXhrl2GljAM4qJHnQLaXm2vgj9b', 1, NULL),
-(85, 'Zord609', '210711036@students.uajy.ac.id', '$2y$12$WaLTDY9BpUh4S4TNTDHG5eeZvSOJD7J8noTrbG35.6weFKPS0hgUS', 'Elementary', 'Beginner', 'user', '2023-12-20 18:24:06', 32, 'hIxo1Brka9i9HB0zlxAqTRBI2EygwRAqtNAKgYeDIWYARlQaoG9RlbCoZuAuRGIDRgp9NZWx69X2AwNtruZw2DXMZqXPFutuyov7', 1, '1703097028.jpg'),
-(87, 'Zord', 'josephzord123@gmail.com', '$2y$12$65jMViSCvZTIAiFg.xOF6un7H.P6J/DVjejUCoCbEEq0S63eQUnGC', 'Under Graduate', 'Advanced', 'user', '2023-12-20 18:41:23', 34, 'd93Rn6604jD4E2b96FUZowzkdZdGjmPAnxKEoMMr7qX54rh4PT81RDNQe7dO9sx56okoR9lnQLdh21h9VY4wGr6v0ExLj8Q6fcSa', 1, '1703097880.jpg');
+(94, 'drapce22', 'nicholas.ivan.christ@gmail.com', '$2y$12$6mMfQx/auA07k0mJjugZM.otBMP5KrV7.aNzrNi8tQ0FG0Bi/Hpdm', 'High School', 'Intermediete', 'admin', '2023-12-20 20:56:16', 35, 'EzMpUBBKusM74eZHb5PkDtZRoDBen6YmR17joBCfUD2gVtJleVWoImr3KsekZidH9RyHnpD7kjiuOR6qhfGYja7MiQnbldK7oES5', 1, '1703131186.jpg'),
+(95, 'draco.captain.000@gmail.com', 'draco.captain.000@gmail.com', '$2y$12$uEnxMLypgU8G3HHJkVR21.Dt/Mn98Kbna.fipSYurG0yfSvXoQSZm', 'Under Graduate', 'Intermediete', 'user', '2023-12-20 21:03:08', 0, 'gDKHRV0uswfHm64Ll1YZ77n2QWUpP1OWYXuU3K4Ahe8lIG1IdyiSrxIESNyxneKqx5rV9ElFvfeBe1olvkvAAM1uMxCEB4gPIIRG', 1, NULL);
 
 -- --------------------------------------------------------
 
@@ -1030,19 +1045,19 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `oauth_clients`
 --
 ALTER TABLE `oauth_clients`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `oauth_personal_access_clients`
 --
 ALTER TABLE `oauth_personal_access_clients`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `pembelian`
 --
 ALTER TABLE `pembelian`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -1060,7 +1075,7 @@ ALTER TABLE `sertifikasi`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=96;
 
 --
 -- AUTO_INCREMENT for table `webinar`
