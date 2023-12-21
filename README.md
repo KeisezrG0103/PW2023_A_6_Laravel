@@ -1,23 +1,13 @@
 # UAS Pemrograman Web Gasal 2023/2024
-- database => pw.sql
-- Fix ERR_CERT_COMMON_NAME_INVALID => klik tubes23.online -> advance -> proceed
-- ENV mail
-  
-MAIL_MAILER=smtp
 
-MAIL_HOST=smtp.gmail.com
 
-MAIL_PORT=587
+##Fix NET::ERR_CERT_COMMON_NAME_INVALID 
 
-MAIL_USERNAME=josephzord123@gmail.com
+1. buka https://tubes23.online/
+2. advance
+3. proceed 
 
-MAIL_PASSWORD=jngpwwnkzvdydegt
 
-MAIL_ENCRYPTION=ssl
-
-MAIL_FROM_ADDRESS="josephzord123@gmail.com"
-
-MAIL_FROM_NAME="${APP_NAME}"
 
 ## Kelas A - Kelompok 6
 
@@ -77,7 +67,25 @@ MAIL_FROM_NAME="${APP_NAME}"
   - PUT /api/user - Update data user/ edit profile user
   - GET /api/webinar/user/{id} - Get data webinar yang didaftar oleh user
   - POST /api/webinar/user - Create ikut webinar untuk user yang sedang login
-  - GET /api//webinar/user/{id_user}/{id_webinar} - Get data webinar yang sudah didaftarkan oleh user sehingga tidak dapat melakukan pendaftaran kembali
+  - GET /api/webinar/user/{id_user}/{id_webinar} - Get data webinar yang sudah didaftarkan oleh user sehingga tidak dapat melakukan pendaftaran kembali
 
 - **React:**
   - Link Repository: [https://github.com/KeisezrG0103/PW2023_A_6_React.git](https://github.com/KeisezrG0103/PW2023_A_6_React.git)
+ 
+- Config Mail 
+
+MAIL_MAILER=smtp
+
+MAIL_HOST=smtp.gmail.com
+
+MAIL_PORT=587
+
+MAIL_USERNAME=josephzord123@gmail.com
+
+MAIL_PASSWORD=jngpwwnkzvdydegt
+
+MAIL_ENCRYPTION=ssl
+
+MAIL_FROM_ADDRESS="josephzord123@gmail.com"
+
+MAIL_FROM_NAME="${APP_NAME}"
