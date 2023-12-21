@@ -63,7 +63,7 @@
 - **React:**
   - Link Repository: [https://github.com/KeisezrG0103/PW2023_A_6_React.git](https://github.com/KeisezrG0103/PW2023_A_6_React.git)
  
-Config Mail 
+- Config Mail 
 
 MAIL_MAILER=smtp
 
